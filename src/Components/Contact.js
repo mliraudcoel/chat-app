@@ -3,14 +3,13 @@ import React from 'react';
 import './Contact.css';
 
 const Contact = (props) => {
-    console.log(props);
     return (
         <div className='Contact'>
-            <p><img className ='avatar' src = {props.avatar} /></p>
+            <p><img className ='avatar' src = {props.avatar} alt = {props.name}/></p>
             <div>
-            <p className = 'name'>{props.name}</p>
+            <h2 className = 'name'>{props.name}</h2>
                 <div className = 'status'>
-                    <p className ={props.online ? 'status-online' : 'status-offline'}></p>
+                    <div className ={props.online ? 'status-online' : 'status-offline'}></div>
                     <p className = 'status-text'>{props.online ? 'Online' : 'Offline'}</p>
                 </div>
             </div>
