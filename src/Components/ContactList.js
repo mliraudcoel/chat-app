@@ -37,14 +37,16 @@ const users = [
     },
 ];
 
-const ContactList = () => (
-    <div>
-    {users.map(user => (
+const ContactList = () => {
+    return (
+    users.map((user) => {
+    return (
     <Contact name= {user.name} avatar= {user.avatar} online= {user.online} />
     )
-    )}
-    </div>
-    );
+    }
+    )
+    )};
+
 
 
 
